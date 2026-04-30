@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  crewai:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - ./src:/app/src
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}

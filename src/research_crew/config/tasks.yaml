@@ -1,0 +1,9 @@
+buscar_noticias:
+  description: "Buscar en internet los artículos y noticias más relevantes publicados en los últimos 7 días sobre el tema indicado: {topic}"
+  expected_output: "Lista de 10 artículos relevantes con título, URL y resumen breve de cada uno"
+  agent: investigador_noticias
+
+generar_reporte:
+  description: "Analizar los artículos encontrados y crear un resumen ejecutivo con los puntos más importantes sobre {topic}"
+  expected_output: "Reporte ejecutivo de 500 palabras con los puntos clave y tendencias identificadas"
+  agent: investigador_noticias
