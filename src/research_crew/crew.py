@@ -15,20 +15,20 @@ class ResearchCrew:
     tasks_config  = "config/tasks.yaml"
 
     @agent
-    def investigador_noticias(self) -> Agent:
+    def news_researcher(self) -> Agent:
         return Agent(
-            config=self.agents_config["investigador_noticias"],
+            config=self.agents_config["news_researcher"],
             llm=_llm,
             verbose=True,
         )
 
     @task
-    def buscar_noticias(self) -> Task:
-        return Task(config=self.tasks_config["buscar_noticias"])
+    def search_news(self) -> Task:
+        return Task(config=self.tasks_config["search_news"])
 
     @task
-    def generar_reporte(self) -> Task:
-        return Task(config=self.tasks_config["generar_reporte"])
+    def generate_report(self) -> Task:
+        return Task(config=self.tasks_config["generate_report"])
 
     @crew
     def crew(self) -> Crew:
